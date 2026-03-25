@@ -1,0 +1,100 @@
+/* ==================== СБРОС И БАЗОВЫЕ СТИЛИ ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    width: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* ==================== КОНТЕЙНЕР И МАКЕТ ==================== */
+.container {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+}
+
+.left {
+    flex: 1;
+    background-color: #FFD966;
+    padding: 40px;
+    font-size: 18px;
+    line-height: 1.6;
+    color: black;
+    overflow-y: auto;
+}
+
+.right {
+    flex: 1;
+    background-color: #E34234;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.right img {
+    max-width: 95%;
+    max-height: 95vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ==================== СТИЛИ ДЛЯ ТЕКСТА ==================== */
+.text-red {
+    color: #E34234;
+}
+
+.text-bg-transparent {
+    color: black;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2px 5px;
+    border-radius: 3px;
+}
+
+.text-strike {
+    text-decoration: line-through;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.text-italic {
+    font-style: italic;
+}
+
+.text-bold {
+    font-weight: bold;
+}
+
+/* ==================== ЗАПРОШЕННЫЕ СЕЛЕКТОРЫ ==================== */
+
+/* 1. Все параграфы и ссылки, имеющие атрибут title */
+p[title],
+a[title] {
+    /* Пример стилей — можно изменить под ваши нужды */
+    border-bottom: 2px dotted #333;
+    cursor: help;
+}
+
+/* 2. Все <h2> из класса test */
+h2.test {
+    /* Пример стилей */
+    font-size: 28px;
+    color: #222;
+    margin: 15px 0;
+}
+
+/* 3. Все элементы, одновременно содержащие классы one, two, four */
+.one.two.four {
+    /* Пример стилей — элемент должен иметь ВСЕ три класса */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-left: 4px solid #E34234;
+}
